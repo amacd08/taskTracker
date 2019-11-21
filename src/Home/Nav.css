@@ -1,0 +1,62 @@
+nav {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoContainer {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.logo {
+    width: 25%;
+    height: 60px;
+    background: white;
+}
+
+.text {
+    width: 20%;
+    height: 60px;
+    color: white;
+}
+
+.home {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: column;
+}
+
+.task {
+    width: 30%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: grey;
+}
+
+.taskEntry {
+    margin-left: 20px;
+    word-break: break-all;
+}
+
+.delete {
+    margin-right: 20px;
+}
+
+.addTask {
+    width: 35%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 25px;
+    margin-top: 50px;
+}
