@@ -7,7 +7,7 @@ const {SERVER_PORT, SESSION_SECRET,CONNECTION_STRING} = process.env
 
 const app=express()
 app.use(express.json())
-      
+
 app.use(session({
     secret: SESSION_SECRET,
     saveUninitialized: false,
