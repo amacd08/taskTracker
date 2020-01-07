@@ -9,6 +9,12 @@ register: async (req, res) => {
     if (userFound[0]) return res.status(409).send('Email already exists')
         const salt = bcrypt.genSaltSync(10)
         const hash = bcrypt.hashSync(password, salt)
+        console.log({
+            firstName,
+            lastName,
+            username,
+            email,
+            password: hash})
         const createdUser = await db.register({
             firstName,
             lastName,
