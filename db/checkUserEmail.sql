@@ -1,1 +1,1 @@
-select email from user_login where email = ${email}
+select email from users where email = ${email}
