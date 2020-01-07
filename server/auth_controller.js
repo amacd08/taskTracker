@@ -15,7 +15,8 @@ register: async (req, res) => {
             username,
             email,
             password: hash
-        }).catch({err () => print(err)})
+        })
+        createdUser.catch(err () => console.log(err))
         session.user = {id: createdUser[0].user_id, username: createdUser[0].username}
         res.status(200).send(session.user)
     }
