@@ -5,11 +5,11 @@ register: async (req, res) => {
     const {firstName, lastName, email, username, password} = req.body
     const {session} = req
     const db = req.app.get('db')
-    const userFound = await db.check_user_email({email})
+    const userFound = await db.checkUserEmail({email})
     if (userFound[0]) return res.stat(409).send('Email already exists')
     const salt = bcrypt.genSaltSync(10)
         const hash = bcrypt.hashSync(password, salt)
-        const createdUser = await db.register_user({
+        const createdUser = await db.register({
             firstName,
             lastName,
             username,
